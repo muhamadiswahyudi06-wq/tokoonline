@@ -1,10 +1,5 @@
 <?php
-session_start(); // mulai session
-
-// hapus semua session
-session_unset();
+include 'config.php';
 session_destroy();
-
-// arahkan kembali ke halaman login
-header("Location: login.php");
-exit;
+header('Location: index.php');
+?>
