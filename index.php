@@ -1,3 +1,4 @@
+<?php include "./config/koneksi.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -242,12 +243,12 @@
                                         <div class="col-md-6 col-lg-4 col-xl-3">
                                             <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
-                                                    <img src="assets/img/coklat.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                    <img src="assets/img/silverquen.jpg" class="img-fluid w-100 rounded-top" alt="">
                                                 </div>
                                                 <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
                                                 <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>coklat</h4>
-                                                    <p>coklat buat</p>
+                                                    <h4>silverquen</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div class="d-flex justify-content-between flex-lg-wrap">
                                                         <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
                                                         <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
@@ -606,7 +607,7 @@
         <!-- Vesitable Shop Start-->
         <div class="container-fluid vesitable py-5">
             <div class="container py-5">
-                <h1 class="mb-0">Fresh coklat</h1>
+                <h1 class="mb-0">Nice coklat</h1>
                 <div class="owl-carousel coklat-carousel justify-content-center">
                     <div class="border border-primary rounded position-relative vesitable-item">
                         <div class="vesitable-img">
@@ -1022,10 +1023,10 @@
                             </div>
                             <div class="d-flex align-items-center flex-nowrap">
                                 <div class="bg-secondary rounded">
-                                    <img src="img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                                    <img src="assets/img/ayuudesu.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
                                 </div>
                                 <div class="ms-4 d-block">
-                                    <h4 class="text-dark">yudi</h4>
+                                    <h4 class="text-dark">yudi kere</h4>
                                     <p class="m-0 pb-3">Profession</p>
                                     <div class="d-flex pe-5">
                                         <i class="fas fa-star text-primary"></i>
@@ -1072,10 +1073,10 @@
                             </div>
                             <div class="d-flex align-items-center flex-nowrap">
                                 <div class="bg-secondary rounded">
-                                    <img src="img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                                    <img src="assets/img/alya.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
                                 </div>
                                 <div class="ms-4 d-block">
-                                    <h4 class="text-dark">razan</h4>
+                                    <h4 class="text-dark">razan cihuyy</h4>
                                     <p class="m-0 pb-3">Profession</p>
                                     <div class="d-flex pe-5">
                                         <i class="fas fa-star text-primary"></i>
