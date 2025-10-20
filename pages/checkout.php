@@ -1,46 +1,68 @@
 <?php
 session_start();
-include("../config/connection.php"); // koneksi database
+include("./config/koneksi.php"); // koneksi database
 
-if (empty($_SESSION['keranjang'])) {
-    echo "<script>alert('Keranjang masih kosong!'); window.location='keranjang.php';</script>";
-    exit;
-}
-
-// Jika form checkout dikirim
-if (isset($_POST['checkout'])) {
-    $nama = mysqli_real_escape_string($koneksi, $_POST['nama']);
-    $alamat = mysqli_real_escape_string($koneksi, $_POST['alamat']);
-    $telepon = mysqli_real_escape_string($koneksi, $_POST['telepon']);
-    $tanggal = date("Y-m-d");
+// ------------------------------
+// Fungsi membuat pesanan
+// ------------------------------
+function buatPesanan($koneksi, $id_pelanggan, $keranjang) {
+    // Hitung total harga
+    $total = 0;
+    foreach ($keranjang as $id_produk => $jumlah) {
+        $result = mysqli_query($koneksi, "SELECT harga FROM produk WHERE id_produk='$id_produk'");
+        $produk = mysqli_fetch_assoc($result);
+        $subtotal = $produk['harga'] * $jumlah;
+        $total += $subtotal;
+    }
 
     // Simpan ke tabel pesanan
-    $query_pesanan = "INSERT INTO pesanan (nama_pelanggan, alamat, telepon, tanggal_pesanan, total_harga) VALUES ('$nama', '$alamat', '$telepon', '$tanggal', 0)";
+    $query_pesanan = "INSERT INTO pesanan (id_pelanggan, tanggal_pesanan, total, status)
+                      VALUES ('$id_pelanggan', NOW(), '$total', 'Menunggu Pembayaran')";
     mysqli_query($koneksi, $query_pesanan);
     $id_pesanan = mysqli_insert_id($koneksi);
 
-    $total_harga = 0;
-
-    // Simpan detail setiap produk ke tabel detail_pesanan
-    foreach ($_SESSION['keranjang'] as $id_produk => $jumlah) {
-        $result = mysqli_query($koneksi, "SELECT * FROM produk WHERE id_produk='$id_produk'");
+    // Simpan detail pesanan
+    foreach ($keranjang as $id_produk => $jumlah) {
+        $result = mysqli_query($koneksi, "SELECT harga FROM produk WHERE id_produk='$id_produk'");
         $produk = mysqli_fetch_assoc($result);
-
         $harga = $produk['harga'];
         $subtotal = $harga * $jumlah;
-        $total_harga += $subtotal;
 
-        mysqli_query($koneksi, "INSERT INTO detail_pesanan (id_pesanan, id_produk, jumlah, harga_satuan, subtotal) VALUES ('$id_pesanan', '$id_produk', '$jumlah', '$harga', '$subtotal')");
+        mysqli_query($koneksi, "INSERT INTO pesanan_detail (id_pesanan, id_produk, jumlah, harga, subtotal)
+                                VALUES ('$id_pesanan', '$id_produk', '$jumlah', '$harga', '$subtotal')");
     }
 
-    // Update total harga di tabel pesanan
-    mysqli_query($koneksi, "UPDATE pesanan SET total_harga='$total_harga' WHERE id_pesanan='$id_pesanan'");
+    // Hapus keranjang pelanggan setelah checkout
+    mysqli_query($koneksi, "DELETE FROM keranjang WHERE id_pelanggan = '$id_pelanggan'");
 
-    // Kosongkan keranjang
-    unset($_SESSION['keranjang']);
+    return $id_pesanan;
+}
 
-    echo "<script>alert('Pesanan berhasil dibuat!'); window.location='detail_pesanan.php?id=$id_pesanan';</script>";
+// ------------------------------
+// Proses utama halaman checkout
+// ------------------------------
+
+// Pastikan pelanggan login
+if (!isset($_SESSION['pelanggan'])) {
+    header("Location: login.php");
     exit;
+}
+
+$pelanggan = $_SESSION['pelanggan'];
+
+// Pastikan keranjang tidak kosong
+if (empty($_SESSION['keranjang'])) {
+    echo "<script>alert('Keranjang kosong!'); window.location='keranjang.php';</script>";
+    exit;
+}
+
+// Jika tombol checkout ditekan
+if (isset($_POST['checkout'])) {
+    $id_pelanggan = $pelanggan['id_pelanggan'];
+    $id_pesanan = buatPesanan($koneksi, $id_pelanggan, $_SESSION['keranjang']);
+
+    unset($_SESSION['keranjang']);
+    echo "<script>alert('Pesanan berhasil dibuat! ID Pesanan: $id_pesanan'); window.location='home.php';</script>";
 }
 ?>
 
@@ -49,119 +71,98 @@ if (isset($_POST['checkout'])) {
 <head>
     <meta charset="UTF-8">
     <title>Checkout | BataviaChoco</title>
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #3e2723;
             color: #fff;
             font-family: Arial, sans-serif;
         }
-        .container {
-            margin-top: 80px;
-            background: #5d4037;
-            padding: 30px;
+        .checkout-container {
+            width: 80%;
+            margin: 50px auto;
+            background: #5c3a21;
             border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
         }
         h2 {
-            color: #ffcc80;
             text-align: center;
-        }
-        label {
-            font-weight: bold;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-        .btn-checkout {
-            background-color: #c69c6d;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .btn-checkout:hover {
-            background-color: #ffcc80;
-            color: #3e2723;
+            color: #ffcc80;
         }
         table {
             width: 100%;
-            background: #6d4c41;
+            margin-top: 20px;
             border-collapse: collapse;
-            color: #fff;
+            background: #6d4c41;
         }
-        th, td {
+        table th, table td {
             padding: 10px;
             border-bottom: 1px solid #8d6e63;
             text-align: center;
         }
+        .btn {
+            background: #c69c6d;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #ffcc80;
+            color: #3e2723;
+        }
     </style>
 </head>
 <body>
+    <div class="checkout-container">
+        <h2>Checkout Pesanan</h2>
 
-<div class="container">
-    <h2>Checkout Pesanan</h2>
-    <hr>
+        <p>Halo, <strong><?= htmlspecialchars($pelanggan['nama']); ?></strong>! Silakan periksa pesanan Anda sebelum melanjutkan pembayaran.</p>
 
-    <h5>Data Pemesan</h5>
-    <form method="post">
-        <label>Nama Lengkap</label>
-        <input type="text" name="nama" required>
+        <form method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Produk</th>
+                        <th>Harga</th>
+                        <th>Jumlah</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $no = 1;
+                    $total = 0;
+                    foreach ($_SESSION['keranjang'] as $id_produk => $jumlah):
+                        $result = mysqli_query($koneksi, "SELECT * FROM produk WHERE id_produk='$id_produk'");
+                        $produk = mysqli_fetch_assoc($result);
+                        $subtotal = $produk['harga'] * $jumlah;
+                        $total += $subtotal;
+                    ?>
+                    <tr>
+                        <td><?= $no++; ?></td>
+                        <td><?= htmlspecialchars($produk['nama_produk']); ?></td>
+                        <td>Rp <?= number_format($produk['harga']); ?></td>
+                        <td><?= $jumlah; ?></td>
+                        <td>Rp <?= number_format($subtotal); ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="4" style="text-align:right;">Total:</th>
+                        <th>Rp <?= number_format($total); ?></th>
+                    </tr>
+                </tfoot>
+            </table>
 
-        <label>Alamat Lengkap</label>
-        <textarea name="alamat" required></textarea>
-
-        <label>Nomor Telepon</label>
-        <input type="text" name="telepon" required>
-
-        <hr>
-        <h5>Ringkasan Pesanan</h5>
-        <table>
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Produk</th>
-                    <th>Harga</th>
-                    <th>Jumlah</th>
-                    <th>Subtotal</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $no = 1;
-                $total = 0;
-                foreach ($_SESSION['keranjang'] as $id_produk => $jumlah):
-                    $result = mysqli_query($koneksi, "SELECT * FROM produk WHERE id_produk='$id_produk'");
-                    $produk = mysqli_fetch_assoc($result);
-                    $subtotal = $produk['harga'] * $jumlah;
-                    $total += $subtotal;
-                ?>
-                <tr>
-                    <td><?= $no++; ?></td>
-                    <td><?= htmlspecialchars($produk['nama_produk']); ?></td>
-                    <td>Rp <?= number_format($produk['harga']); ?></td>
-                    <td><?= $jumlah; ?></td>
-                    <td>Rp <?= number_format($subtotal); ?></td>
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th colspan="4">Total</th>
-                    <th>Rp <?= number_format($total); ?></th>
-                </tr>
-            </tfoot>
-        </table>
-
-        <div class="text-center mt-4">
-            <button type="submit" name="checkout" class="btn-checkout">Proses Pesanan</button>
-        </div>
-    </form>
-</div>
-
+            <center>
+                <button type="submit" name="checkout" class="btn">Konfirmasi Pesanan</button>
+            </center>
+        </form>
+    </div>
 </body>
 </html>
