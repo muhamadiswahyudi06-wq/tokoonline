@@ -1,4 +1,5 @@
-<?php include "./config/koneksi.php"; ?>
+<?php 
+include "./config/connection.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
