@@ -634,8 +634,7 @@ require_once 'config/koneksi.php';
                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
                         <div class="p-4 rounded-bottom">
                             <h4>dairy milk</h4>
-                            <p>必要なのは愛だけ。
-でも、たまにはチョコレートを少し食べても悪くないわ。</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
                                 <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
                                 <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
@@ -644,11 +643,11 @@ require_once 'config/koneksi.php';
                     </div>
                     <div class="border border-primary rounded position-relative vesitable-item">
                         <div class="vesitable-img">
-                            <img src="img/vegetable-item-3.png" class="img-fluid w-100 rounded-top bg-light" alt="">
+                            <img src="assets/img/silverquen.jpg" class="img-fluid w-100 rounded-top bg-light" alt="">
                         </div>
                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
                         <div class="p-4 rounded-bottom">
-                            <h4>Banana</h4>
+                            <h4>silverquen</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
                                 <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
@@ -658,11 +657,11 @@ require_once 'config/koneksi.php';
                     </div>
                     <div class="border border-primary rounded position-relative vesitable-item">
                         <div class="vesitable-img">
-                            <img src="img/vegetable-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            <img src="assets/img/vanhouten.jpg" class="img-fluid w-100 rounded-top" alt="">
                         </div>
                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
                         <div class="p-4 rounded-bottom">
-                            <h4>Bell Papper</h4>
+                            <h4>vanhouten</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
                                 <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
@@ -672,11 +671,11 @@ require_once 'config/koneksi.php';
                     </div>
                     <div class="border border-primary rounded position-relative vesitable-item">
                         <div class="vesitable-img">
-                            <img src="img/vegetable-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            <img src="assets/img/monggo.jpg" class="img-fluid w-100 rounded-top" alt="">
                         </div>
                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
                         <div class="p-4 rounded-bottom">
-                            <h4>Potatoes</h4>
+                            <h4>monggo</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
                                 <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
@@ -686,11 +685,11 @@ require_once 'config/koneksi.php';
                     </div>
                     <div class="border border-primary rounded position-relative vesitable-item">
                         <div class="vesitable-img">
-                            <img src="img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            <img src="assets/img/goldenfiil.jpg" class="img-fluid w-100 rounded-top" alt="">
                         </div>
                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
                         <div class="p-4 rounded-bottom">
-                            <h4>Parsely</h4>
+                            <h4>goldenfiil</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
                                 <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
@@ -700,11 +699,11 @@ require_once 'config/koneksi.php';
                     </div>
                     <div class="border border-primary rounded position-relative vesitable-item">
                         <div class="vesitable-img">
-                            <img src="img/vegetable-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            <img src="assets/img/galetto.jpg" class="img-fluid w-100 rounded-top" alt="">
                         </div>
                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
                         <div class="p-4 rounded-bottom">
-                            <h4>Potatoes</h4>
+                            <h4>galetto</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
                                 <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
@@ -714,11 +713,11 @@ require_once 'config/koneksi.php';
                     </div>
                     <div class="border border-primary rounded position-relative vesitable-item">
                         <div class="vesitable-img">
-                            <img src="img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            <img src="assets/img/Alfa.jpg" class="img-fluid w-100 rounded-top" alt="">
                         </div>
                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
                         <div class="p-4 rounded-bottom">
-                            <h4>Parsely</h4>
+                            <h4>Alfa</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
                                 <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
@@ -774,16 +773,16 @@ require_once 'config/koneksi.php';
                         <div class="p-4 rounded bg-light">
                             <div class="row align-items-center">
                                 <div class="col-6">
-                                    <img src="img/best-product-1.jpg" class="img-fluid rounded-circle w-100" alt="">
+                                    <img src="assets/img/Alfa.jpg" class="img-fluid rounded-circle w-100" alt="">
                                 </div>
                                 <div class="col-6">
-                                    <a href="#" class="h5">Organic Tomato</a>
+                                    <a href="#" class="h5">Alfa</a>
                                     <div class="d-flex my-3">
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star text-primary"></i>
                                     </div>
                                     <h4 class="mb-3">3.12 $</h4>
                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
@@ -795,18 +794,18 @@ require_once 'config/koneksi.php';
                         <div class="p-4 rounded bg-light">
                             <div class="row align-items-center">
                                 <div class="col-6">
-                                    <img src="img/best-product-2.jpg" class="img-fluid rounded-circle w-100" alt="">
+                                    <img src="assets/img/silverquen.jpg" class="img-fluid rounded-circle w-100" alt="">
                                 </div>
                                 <div class="col-6">
-                                    <a href="#" class="h5">Organic Tomato</a>
+                                    <a href="#" class="h5">silverquen</a>
                                     <div class="d-flex my-3">
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star text-primary"></i>
                                     </div>
-                                    <h4 class="mb-3">3.12 $</h4>
+                                    <h4 class="mb-3">3.30 $</h4>
                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                 </div>
                             </div>
@@ -816,18 +815,18 @@ require_once 'config/koneksi.php';
                         <div class="p-4 rounded bg-light">
                             <div class="row align-items-center">
                                 <div class="col-6">
-                                    <img src="img/best-product-3.jpg" class="img-fluid rounded-circle w-100" alt="">
+                                    <img src="assets/img/galetto.jpg" class="img-fluid rounded-circle w-100" alt="">
                                 </div>
                                 <div class="col-6">
-                                    <a href="#" class="h5">Organic Tomato</a>
+                                    <a href="#" class="h5">galetto</a>
                                     <div class="d-flex my-3">
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star text-primary"></i>
                                     </div>
-                                    <h4 class="mb-3">3.12 $</h4>
+                                    <h4 class="mb-3">3.15 $</h4>
                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                 </div>
                             </div>
@@ -837,18 +836,18 @@ require_once 'config/koneksi.php';
                         <div class="p-4 rounded bg-light">
                             <div class="row align-items-center">
                                 <div class="col-6">
-                                    <img src="img/best-product-4.jpg" class="img-fluid rounded-circle w-100" alt="">
+                                    <img src="assets/img/monggo.jpg" class="img-fluid rounded-circle w-100" alt="">
                                 </div>
                                 <div class="col-6">
-                                    <a href="#" class="h5">Organic Tomato</a>
+                                    <a href="#" class="h5">monggo</a>
                                     <div class="d-flex my-3">
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star text-primary"></i>
                                     </div>
-                                    <h4 class="mb-3">3.12 $</h4>
+                                    <h4 class="mb-3">3.10 $</h4>
                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                 </div>
                             </div>
@@ -858,18 +857,18 @@ require_once 'config/koneksi.php';
                         <div class="p-4 rounded bg-light">
                             <div class="row align-items-center">
                                 <div class="col-6">
-                                    <img src="img/best-product-5.jpg" class="img-fluid rounded-circle w-100" alt="">
+                                    <img src="assets/img/chocho.png" class="img-fluid rounded-circle w-100" alt="">
                                 </div>
                                 <div class="col-6">
-                                    <a href="#" class="h5">Organic Tomato</a>
+                                    <a href="#" class="h5">chocho</a>
                                     <div class="d-flex my-3">
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star text-primary"></i>
                                     </div>
-                                    <h4 class="mb-3">3.12 $</h4>
+                                    <h4 class="mb-3">3.5 $</h4>
                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                 </div>
                             </div>
@@ -879,18 +878,18 @@ require_once 'config/koneksi.php';
                         <div class="p-4 rounded bg-light">
                             <div class="row align-items-center">
                                 <div class="col-6">
-                                    <img src="img/best-product-6.jpg" class="img-fluid rounded-circle w-100" alt="">
+                                    <img src="assets/img/dairy milk.jpg" class="img-fluid rounded-circle w-100" alt="">
                                 </div>
                                 <div class="col-6">
-                                    <a href="#" class="h5">Organic Tomato</a>
+                                    <a href="#" class="h5">dairy milk</a>
                                     <div class="d-flex my-3">
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star text-primary"></i>
                                     </div>
-                                    <h4 class="mb-3">3.12 $</h4>
+                                    <h4 class="mb-3">3.45 $</h4>
                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                 </div>
                             </div>
@@ -898,68 +897,68 @@ require_once 'config/koneksi.php';
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="text-center">
-                            <img src="img/fruite-item-1.jpg" class="img-fluid rounded" alt="">
+                            <img src="assets/img/dark almond.jpg" class="img-fluid rounded" alt="">
                             <div class="py-4">
-                                <a href="#" class="h5">Organic Tomato</a>
+                                <a href="#" class="h5">dark almond</a>
                                 <div class="d-flex my-3 justify-content-center">
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star text-primary"></i>
                                 </div>
-                                <h4 class="mb-3">3.12 $</h4>
+                                <h4 class="mb-3">3.25 $</h4>
                                 <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="text-center">
-                            <img src="img/fruite-item-2.jpg" class="img-fluid rounded" alt="">
+                            <img src="assets/img/kit kat.jpg" class="img-fluid rounded" alt="">
                             <div class="py-4">
-                                <a href="#" class="h5">Organic Tomato</a>
+                                <a href="#" class="h5">kit kat</a>
                                 <div class="d-flex my-3 justify-content-center">
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star text-primary"></i>
                                 </div>
-                                <h4 class="mb-3">3.12 $</h4>
+                                <h4 class="mb-3">4.20 $</h4>
                                 <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="text-center">
-                            <img src="img/fruite-item-3.jpg" class="img-fluid rounded" alt="">
+                            <img src="assets/img/macadamia.jpg" class="img-fluid rounded" alt="">
                             <div class="py-4">
-                                <a href="#" class="h5">Organic Tomato</a>
+                                <a href="#" class="h5">macadamia</a>
                                 <div class="d-flex my-3 justify-content-center">
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star text-primary"></i>
                                 </div>
-                                <h4 class="mb-3">3.12 $</h4>
+                                <h4 class="mb-3">3.57 $</h4>
                                 <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="text-center">
-                            <img src="img/fruite-item-4.jpg" class="img-fluid rounded" alt="">
+                            <img src="assets/img/milka.jpg" class="img-fluid rounded" alt="">
                             <div class="py-2">
-                                <a href="#" class="h5">Organic Tomato</a>
+                                <a href="#" class="h5">milka</a>
                                 <div class="d-flex my-3 justify-content-center">
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star text-primary"></i>
                                 </div>
-                                <h4 class="mb-3">3.12 $</h4>
+                                <h4 class="mb-3">3.80 $</h4>
                                 <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                             </div>
                         </div>
