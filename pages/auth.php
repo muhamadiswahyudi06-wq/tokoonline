@@ -15,7 +15,6 @@ function login($username, $password)
     if (mysqli_num_rows($result) === 1) {
         $user = mysqli_fetch_assoc($result);
 
-        // verifikasi password
         if (password_verify($password, $user['password'])) {
             $_SESSION['login'] = true;
             $_SESSION['username'] = $user['username'];
@@ -35,7 +34,6 @@ function register($nama, $email, $username, $password)
     $username = mysqli_real_escape_string($koneksi, $username);
     $password = password_hash($password, PASSWORD_DEFAULT);
 
-    // cek username sudah ada atau belum
     $cek = mysqli_query($koneksi, "SELECT username FROM users WHERE username='$username'");
     if (mysqli_num_rows($cek) > 0) {
         return "Username sudah digunakan!";
@@ -56,7 +54,6 @@ function register($nama, $email, $username, $password)
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
 
-    // LOGIN
     if ($action == "login") {
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -72,14 +69,11 @@ if (isset($_POST['action'])) {
                 window.history.back();
             </script>";
         }
-    }
-
-    // REGISTER
-    elseif ($action == "register") {
-        $nama = $_POST['haikal ganteng'];
-        $email = $_POST['haikalganteng@gmail.com'];
-        $username = $_POST['haikal'];
-        $password = $_POST['haikal123'];
+    } elseif ($action == "register") {
+        $nama = $_POST['nama'];
+        $email = $_POST['email'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
 
         $result = register($nama, $email, $username, $password);
 
