@@ -11,7 +11,7 @@
       <!-- Kolom Kanan: Gambar Produk -->
       <div class="col-lg-6 text-center">
         <div class="position-relative">
-          <img src="assets/img/chocolate-banner.png" class="img-fluid rounded shadow" alt="Coklat Premium">
+          <img src="assets/img/world chocho.webp" class="img-fluid rounded shadow" alt="Coklat Premium">
           <div class="position-absolute top-0 start-0 bg-white text-dark rounded-circle d-flex flex-column align-items-center justify-content-center shadow" style="width: 120px; height: 120px;">
             <span class="h5 mb-0">Harga</span>
             <span class="h3 fw-bold">Rp 49.000</span>
