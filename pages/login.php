@@ -110,10 +110,10 @@
         <!-- Tentukan aksi -->
         <input type="hidden" name="action" value="register">
 
-        <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" required>
-        <input type="email" class="form-control" name="email" placeholder="Email" required>
-        <input type="text" class="form-control" name="username" placeholder="Username" required>
-        <input type="password" class="form-control" name="password" placeholder="Password" required>
+        <input type="text" class="form-control" name="nama" placeholder="haikal ganteng" required>
+        <input type="email" class="form-control" name="email" placeholder="haikalganteng@gmail.com" required>
+        <input type="text" class="form-control" name="username" placeholder="haikal" required>
+        <input type="password" class="form-control" name="password" placeholder="haikal123" required>
 
         <button type="submit" class="btn btn-success w-100 mt-2">Daftar</button>
       </form>

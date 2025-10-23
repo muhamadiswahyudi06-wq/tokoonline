@@ -76,10 +76,10 @@ if (isset($_POST['action'])) {
 
     // REGISTER
     elseif ($action == "register") {
-        $nama = $_POST['nama'];
-        $email = $_POST['email'];
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $nama = $_POST['haikal ganteng'];
+        $email = $_POST['haikalganteng@gmail.com'];
+        $username = $_POST['haikal'];
+        $password = $_POST['haikal123'];
 
         $result = register($nama, $email, $username, $password);
 
