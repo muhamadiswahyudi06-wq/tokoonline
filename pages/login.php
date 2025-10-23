@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login & Register Slide</title>
+  <title>Login & Register - Coklat</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
       height: 100vh;
-      background: linear-gradient(120deg, #74ABE2, #5563DE);
+      background: linear-gradient(120deg, #8B4513, #3E2723); /* Gradasi coklat tua */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -22,7 +22,7 @@
       height: 500px;
       background: #fff;
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
       display: flex;
       overflow: hidden;
       position: relative;
@@ -40,7 +40,7 @@
     }
 
     .register-box {
-      background: #f8f9fa;
+      background: #fdf6f0; /* Warna lembut seperti krim coklat */
       transform: translateX(100%);
       position: absolute;
       right: 0;
@@ -58,7 +58,7 @@
     }
 
     .btn-switch {
-      background-color: #5563DE;
+      background-color: #6B3E1D; /* Coklat tua */
       color: #fff;
       border: none;
       border-radius: 30px;
@@ -67,18 +67,41 @@
     }
 
     .btn-switch:hover {
-      background-color: #3b49b3;
+      background-color: #8B4513; /* Lebih terang */
     }
 
     h2 {
       margin-bottom: 30px;
-      color: #333;
-      font-weight: 600;
+      color: #3E2723;
+      font-weight: 700;
     }
 
     .form-control {
       margin-bottom: 15px;
       border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .btn-primary {
+      background-color: #6B3E1D;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #8B4513;
+    }
+
+    .btn-success {
+      background-color: #A0522D;
+      border: none;
+    }
+
+    .btn-success:hover {
+      background-color: #8B4513;
+    }
+
+    p {
+      color: #5D4037;
     }
   </style>
 </head>
@@ -89,7 +112,6 @@
     <div class="form-box login-box">
       <h2>Login</h2>
       <form action="auth/auth.php" method="POST">
-        <!-- Tentukan aksi -->
         <input type="hidden" name="action" value="login">
 
         <input type="text" class="form-control" name="username" placeholder="Username" required>
@@ -107,7 +129,6 @@
     <div class="form-box register-box">
       <h2>Register</h2>
       <form action="auth/auth.php" method="POST">
-        <!-- Tentukan aksi -->
         <input type="hidden" name="action" value="register">
 
         <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" required>
