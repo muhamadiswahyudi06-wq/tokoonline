@@ -27,10 +27,10 @@
               <a href="beli.php?id=<?= $row['id']; ?>" class="btn btn-warning rounded-pill">Beli</a>
             </div>
           </div>
-          </div>
+        </div>
       </div>
     <?php } ?>
-  </div>
+     </div>
 </div>
 <!-- Produk Section End -->
 
