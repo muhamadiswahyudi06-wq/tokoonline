@@ -61,7 +61,7 @@
                             <h4 class="text-light mb-3">Contact</h4>
                             <p>Address: 1429 Netus Rd, NY 48247</p>
                             <p>Email: BataviaChoco@gmail.com</p>
-                            <p>Phone: +0123 4567 8910</p>
+                            <p>Phone: +0823273372</p>
                             <p>Payment Accepted</p>
                             <img src="assets/img/payment.png" class="img-fluid" alt="">
                         </div>
